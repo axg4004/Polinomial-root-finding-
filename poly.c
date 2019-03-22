@@ -1,5 +1,5 @@
 /***********************************************************************
- * Student C framework to calculate the roots and evaluate polynomials
+ * C framework to calculate the roots and evaluate polynomials
  * static functions are not REQURED, you are free to implement they way
  * you wish
  * Course: Applied Programming 

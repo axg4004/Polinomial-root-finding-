@@ -1,3 +1,11 @@
+/***********************************************************************
+ * Tests three types of root finding, secant, newton, and bisection,
+ * based on user input and prints out the timing results.
+ * Course: Applied Programming 
+ *
+ * Author: Abhimanyu Gupta
+ ***********************************************************************/ 
+
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,10 +15,10 @@
 
 #define BUFFER (256)
 
-/************************************************************************
-  Tests three types of root finding, secant, newton, and bisection,
-  based on user input and prints out the timing results.
-************************************************************************/
+
+/*
+  Main function to test root finding methods based on user input 
+*/
 int main(int argc, char* argv[])
 {
    /*------------------------------------------------------------------------
@@ -122,67 +130,5 @@ if (Polyfile != NULL){
 	{
 	 fprintf(stderr, " file not found, not working\n");
 	}
-
-//Used for hw5
-/*
-    DECLARE_TIMER(M);
-    DECLARE_REPEAT_VAR(V);
-
-   // Performs the root finding with bisection 
-   if(mode == BISECT)
-   {
-	START_TIMER(M);
-	BEGIN_REPEAT_TIMING(100000,V);
-
-
-	x = bisection(&func1,guess1,guess2, tol,verbose);
-
-	END_REPEAT_TIMING;
-	STOP_TIMER(M);
- 	PRINT_TIMER(M);
-	PRINT_RTIMER(M,100000);
-	
-	printf( "The bisection result is: %f \n", x);
-
-   }  // End if bisection
-   
-   // Performs the root finding using the secant method
-   else if(mode == SECANT)
-   {
-	RESET_TIMER(M);
-
-	START_TIMER(M);
-	BEGIN_REPEAT_TIMING(100000,V);
-
-	x2 = secant(&func1,guess1,guess2, 1000, tol,verbose);
-
-	END_REPEAT_TIMING;
-	STOP_TIMER(M);
- 	PRINT_TIMER(M);
-	PRINT_RTIMER(M,100000);
-	RESET_TIMER(M);
-	
-	printf("The secant result is: %f \n",x2);
-   } // End secant
-
-   // Performs the root finding using newtons method 
-   else // must be newton 
-   {
-	START_TIMER(M);
-	BEGIN_REPEAT_TIMING(100000,V);
-
-	x3 = newton(&func1,&func1Deriv,guess1,1000, tol,verbose);
-
-	END_REPEAT_TIMING;
-	STOP_TIMER(M);
- 	PRINT_TIMER(M);
-	PRINT_RTIMER(M,100000);
-	RESET_TIMER(M);
-
-	printf( "The newton result is: %f \n", x3);
-   } // End newton 
-       
-    return PGM_SUCCESS;
-*/
 
 }
